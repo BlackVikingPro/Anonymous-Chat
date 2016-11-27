@@ -50,17 +50,12 @@ namespace Anonymous_Chat
                 // Configure the audio output. 
                 synth.SetOutputToDefaultAudioDevice();
 
-                // Speak a string synchronously.
-                // synth.Speak("What is your favorite color?");
                 try
                 {
                     switch (args[0])
                     {
                         case "/?":
-                            string location = System.Reflection.Assembly.GetEntryAssembly().Location;
-                            string name = System.IO.Path.GetFileName(location);
                             Usage();
-                            // Console.WriteLine("It Talks!\nSyntax: {0} [message]", name);
                             Environment.Exit(0);
                             break;
                     }
@@ -77,10 +72,7 @@ namespace Anonymous_Chat
                 }
                 catch
                 {
-                    string location = System.Reflection.Assembly.GetEntryAssembly().Location;
-                    string name = System.IO.Path.GetFileName(location);
                     Usage();
-                    // Console.WriteLine("It Talks!\nSyntax: {0} [message]", name);
                 }
             }
         }
